@@ -1,0 +1,25 @@
+S.No,City,Air Quality,"Index
+Value",Prominent Pollutant,"No. of Stations
+Participated/
+Total Stations"
+1,Agartala,Moderate,170,PM2.5,1/2
+2,Agra,Moderate,102,PM10,6/6
+3,Ahmedabad,Moderate,131,"O3 , PM10, PM2.5",9/9
+4,Aizawl,Good,18,PM10,1/1
+5,Ajmer,Moderate,105,PM2.5,1/1
+6,Akola,Satisfactory,98,PM10,1/1
+7,Alwar,Satisfactory,78,PM10,1/1
+8,Amaravati,Good,49,CO,1/1
+9,Ambala,Moderate,103,PM10,1/1
+10,Amravati,Moderate,117,"PM10, PM2.5",2/2
+11,Amritsar,Moderate,160,PM2.5,1/1
+12,Angul,Moderate,118,PM2.5,1/1
+13,Ankleshwar,Moderate,176,PM2.5,1/1
+14,Araria,Moderate,194,PM2.5,1/1
+15,Arrah,Poor,285,PM2.5,1/1
+16,Asansol,Poor,252,PM2.5,4/4
+17,Aurangabad (Bihar),Moderate,170,PM2.5,1/1
+18,"Aurangabad
+(Maharashtra)",Moderate,105,"PM10, PM2.5",3/3
+19,Baddi,Poor,217,PM2.5,1/1
+20,Badlapur,Moderate,178,PM2.5,1/1
