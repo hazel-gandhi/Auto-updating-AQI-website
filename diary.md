@@ -19,3 +19,11 @@ After this, I set up github actions and added extra imports in my yml file inclu
 After getting multiple errors due to missing imports, I was finally able to make my code run.
 
 Making the map:
+Tried to find a geojson file that had the coordinates of the Indian cities in my database. Could not find any.
+Used the Google Geocoding API (with some help from ChatGPT) to get the coordinates on my own and merged that with my original dataframe
+Uploaded the new dataframe to Datawrapper. 
+Adjusted the range of AQI with corresponding colors, set up the width of the map, made some font changes to the HTML. 
+
+Issues faced, need resolving:
+1. Could not adjust the height of the map. For this, I tried changing the height inside the embed code, the CSS, and even within Datawrapper settings, but nothing worked. Right now, my map places the main content on the right hand side and not in the center like I wanted. That is one issue I wanted to resolve
+2. Would have liked to add a line on top that specifies the date of the AQI, something like "AQI as on December 15, 2024". Tried writing my scraper inside VS Code and running it but it wasn't working. 
