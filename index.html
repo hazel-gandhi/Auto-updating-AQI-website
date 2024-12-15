@@ -1,3 +1,16 @@
+from bs4 import BeautifulSoup
+import requests
+url = "https://cpcb.nic.in/AQI_Bulletin.php"
+raw_html = requests.get(url).content
+soup_doc = BeautifulSoup(raw_html, 'html.parser')
+soup_doc.prettify()
+pdfs = soup_doc.find('ol').find('li').find('a')['href']
+from datetime import datetime
+url = pdfs
+current_date = datetime.now()
+new_date_string = current_date.strftime("%B %d, %Y")
+date_of_doc = f"AQI as on {new_date_string}"
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +20,7 @@
     <style>
         body {
             margin: 0;
-            background-color: aliceblue;
+            background-color: bisque;
         }
 
         /* Make the page 700px wide, centered */
@@ -18,7 +31,7 @@
 
         /* Use a nice font */
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Lora", Helvetica, Arial, sans-serif;
         }
 
         h1 {
@@ -44,11 +57,12 @@
 
 <body>
     <div class="container">
-        <h1><span style='font-size:100px;'>&#128567;</span> India's AQI Map 🏭</h1>
+        <h1><span style='font-size:500px;'>&#128567;</span> India's AQI Map 🏭</h1>
         <h3>This map shows the daily AQI of 250 major Indian cities</h3>
         <p>The map below auto-updates every day. Air quality is scored using the <a
-                href="https://cpcb.nic.in/National-Air-Quality-Index/">index</a>. put out by the Central Pollution
+                href="https://cpcb.nic.in/National-Air-Quality-Index/">index</a> put out by the Central Pollution
             Control Board of India</p>
+        <p>{date_of_doc}</p>
         <div class="graphic">
             <iframe title="India's AQI Map" aria-label="Map" id="datawrapper-chart-KWAk9"
                 src="https://datawrapper.dwcdn.net/KWAk9/1/" scrolling="yes" frameborder="0"
