@@ -1,4 +1,4 @@
-Find a link to my project here: https://hazel-gandhi.github.io/foundations-final-project2/
+Find a link to my project here: https://hazel-gandhi.github.io/Auto-updating-AQI-website/
 
 
 This auto-updating website shows the daily AQI of 250 Indian cities.
