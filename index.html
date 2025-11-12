@@ -2,61 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>India's AQI Map</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            background-color: bisque;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>India's AQI Map</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: bisque;
+      font-family: "Lora", serif;
+    }
 
-        /* Make the page 700px wide, centered */
-        .container {
-            width: 1200px;
-            margin: 4em auto;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 4em auto;
+      padding: 0 1em;
+    }
 
-        /* Use a nice font */
-        body {
-            font-family: "Lora", serif;
-        }
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin: 1em 0;
+      line-height: 1.2;
+    }
 
-        h1 {
-            text-align: center;
-            font-size: 3em;
-            margin: 2em 0;
-        }
+    h3 {
+      text-align: center;
+      font-weight: 400;
+      margin: 0.5em 0 1.5em;
+    }
 
-        .graphic {
-            max-width: 1000px;
-            margin: 2em auto;
-            height: 1000px;
-        }
+    p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2em;
+      line-height: 1.6;
+    }
 
-        #footer {
-            text-align: center;
-            padding: 4em;
-            background-color: #f0f1ff;
-            border-top: solid white 5px;
-        }
-    </style>
+    a {
+      color: #2b2bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .graphic {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 2em auto;
+      aspect-ratio: 1 / 1; /* maintains a square ratio */
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    #footer {
+      text-align: center;
+      padding: 3em 1em;
+      background-color: #f0f1ff;
+      border-top: solid white 5px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .container {
+        margin: 2em auto;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .graphic {
+        aspect-ratio: 4 / 3;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.7em;
+      }
+
+      h3 {
+        font-size: 1em;
+      }
+
+      .graphic {
+        aspect-ratio: 3 / 2;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1><span style='font-size:50px;'>&#128567;</span> India's AQI Map 🏭</h1>
-        <h3>This map shows the daily AQI of 250 major Indian cities</h3>
-        <p>The map below auto-updates every day. Air quality is scored using the <a
-                href="https://cpcb.nic.in/National-Air-Quality-Index/">index</a> put out by the Central Pollution
-            Control Board of India</p>
-        <div class="graphic">
-            <iframe title="India's AQI Map" aria-label="Map" id="datawrapper-chart-KWAk9"
-                src="https://datawrapper.dwcdn.net/KWAk9/1/" scrolling="yes" frameborder="0"
-                style="width:100%; !important; border: none;" height="100%" data-external="1"></iframe>
-            <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
-            </script>
-        </div>
+  <div class="container">
+    <h1><span style='font-size:50px;'>&#128567;</span> India's AQI Map 🏭</h1>
+    <h3>This map shows the daily AQI of 250 major Indian cities</h3>
+    <p>The map below auto-updates every day. Air quality is scored using the
+      <a href="https://cpcb.nic.in/National-Air-Quality-Index/" target="_blank" rel="noopener noreferrer">
+        index</a> put out by the Central Pollution Control Board of India.
+    </p>
+
+    <div class="graphic">
+      <iframe title="India's AQI Map" aria-label="Map" id="datawrapper-chart-KWAk9"
+        src="https://datawrapper.dwcdn.net/KWAk9/1/" scrolling="yes" frameborder="0"
+        data-external="1"></iframe>
     </div>
+  </div>
+
+  <div id="footer">
+    <p>© 2025 India's AQI Map | Data source: CPCB</p>
+  </div>
+
+  <script type="text/javascript">
+    !function () {
+      "use strict";
+      window.addEventListener("message", (function (a) {
+        if (void 0 !== a.data["datawrapper-height"]) {
+          var e = document.querySelectorAll("iframe");
+          for (var t in a.data["datawrapper-height"])
+            for (var r = 0; r < e.length; r++)
+              if (e[r].contentWindow === a.source) {
+                e[r].style.height = a.data["datawrapper-height"][t] + "px";
+              }
+        }
+      }))
+    }();
+  </script>
+</body>
 
 </html>
