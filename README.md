@@ -5,9 +5,14 @@
 **Link to the project:** [hazel-gandhi.github.io/Auto-updating-AQI-website/](https://hazel-gandhi.github.io/Auto-updating-AQI-website/)
 
 ---
-## Folder guide:
+## Folder Guide
 
-### 1. `notebook+data`: Contains all notebooks and csvs used for the analysis. Also includes a folder for the daily pdfs with AQI data.
+### 1. `notebooks+data`
+This folder is the root for all scripts. Structure is:
+
+* All `.ipynb` files used for scraping and analysis.
+* **Subfolder `/data`**: Contains all CSV files that the analysis outputs
+* **Subfolder `/pdfs`**: Stores the daily PDFs downloaded and used to scrape AQI data.
 
 ## Workflow:
 
