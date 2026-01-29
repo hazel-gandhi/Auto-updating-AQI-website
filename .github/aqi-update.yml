@@ -28,7 +28,7 @@ jobs:
     - name: Install all necessary packages
       run: pip install jupyter lxml pandas requests beautifulsoup4 html5lib img2table.document
     - name: Scraping today's data
-      run: jupyter nbconvert --to notebook --execute "IndiaAQI3.ipynb" --stdout
+      run: jupyter nbconvert --to notebook --execute "india-aqi-scraper.ipynb" --stdout
     - name: Commit and push any changes
       run: |-
         git config user.name "Automated"
