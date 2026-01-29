@@ -5,8 +5,11 @@
 **Link to the project:** [hazel-gandhi.github.io/Auto-updating-AQI-website/](https://hazel-gandhi.github.io/Auto-updating-AQI-website/)
 
 ---
+## Folder guide:
 
-## Workflow and Repository Directory
+### 1. `notebook+data`: Contains all notebooks and csvs used for the analysis. Also includes a folder for the daily pdfs with AQI data.
+
+## Workflow:
 
 ### 1. `step1-india-aqi-scraper.ipynb`
 Extract the PDF from the pollution control website using **BeautifulSoup** and analyze it using **Natural PDF**. City data is exported to `cities.csv`.

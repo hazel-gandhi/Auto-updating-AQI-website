@@ -53,7 +53,8 @@
       width: 100%;
       max-width: 1000px;
       margin: 2em auto;
-      aspect-ratio: 1 / 1; /* maintains a square ratio */
+      aspect-ratio: 1 / 1;
+      /* maintains a square ratio */
     }
 
     iframe {
@@ -113,21 +114,37 @@
     <h3>This map shows the daily AQI of 250 major Indian cities</h3>
     <p>The map below auto-updates every day. Air quality is shown using the
       <a href="https://cpcb.nic.in/National-Air-Quality-Index/" target="_blank" rel="noopener noreferrer">
-        index</a> put out by the Central Pollution Control Board of India. Hover over or click the dots to see the location's AQI score.
+        index</a> put out by the Central Pollution Control Board of India. Hover over or click the dots to see the
+      location's AQI score.
     </p>
+    <p id="current-date" style="font-weight: bold; color: #555; margin-bottom: 1em;"></p>
 
     <div class="graphic">
       <iframe title="India's AQI Map" aria-label="Map" id="datawrapper-chart-KWAk9"
-        src="https://datawrapper.dwcdn.net/KWAk9/1/" scrolling="yes" frameborder="0"
-        data-external="1"></iframe>
+        src="https://datawrapper.dwcdn.net/KWAk9/1/" scrolling="yes" frameborder="0" data-external="1"></iframe>
     </div>
   </div>
 
   <div id="footer">
-    <p>Click <a href="https://github.com/hazel-gandhi/Auto-updating-AQI-website">here</a> to see the code behind this project and  <a href="https://hazel-gandhi.github.io">here</a> if you would like to see more of my work.</p>
+    <p>Click <a href="https://github.com/hazel-gandhi/Auto-updating-AQI-website">here</a> to see the code behind this
+      project and <a href="https://hazel-gandhi.github.io">here</a> if you would like to see more of my work.</p>
   </div>
 
   <script type="text/javascript">
+    // Function to display the current date
+    function updateDate() {
+      const dateElement = document.getElementById('current-date');
+      const now = new Date();
+
+      // Format options (e.g., May 20, 2024)
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const formattedDate = now.toLocaleDateString('en-IN', options);
+
+      dateElement.innerText = "Last Updated: " + formattedDate;
+    }
+
+    // Run the function when the page loads
+    updateDate();
     !function () {
       "use strict";
       window.addEventListener("message", (function (a) {
