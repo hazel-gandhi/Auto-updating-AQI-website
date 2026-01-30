@@ -4,7 +4,7 @@
 
 **Link to the project:** [hazel-gandhi.github.io/Auto-updating-AQI-website/](https://hazel-gandhi.github.io/Auto-updating-AQI-website/)
 
----
+
 ## Folder Guide
 
 ### 1. `notebooks+data`
@@ -42,7 +42,6 @@ Extract the PDF from the pollution control website using **BeautifulSoup** and a
     df.head()
     ```
 
----
 
 ### 2. `step2-geocoding.ipynb`
 Import `cities.csv` to get the latitude and longitude for each city.
@@ -75,14 +74,12 @@ Import `cities.csv` to get the latitude and longitude for each city.
 
 * **2.3 Export results:** Save output to `city_coords.csv`.
 
----
 
 ### 3. `step3-data-for-chart.ipynb`
 Final data cleaning and merging. This step joins the coordinates with the AQI data and exports the results to the production file.
 
 > **Note:** The main file that updates every day is `final_aqi.csv`.
 
----
 
 ## Data Diary
 A detailed breakdown of the process and challenges faced during this project is available in the [diary.md](./diary.md) file of this repository.
